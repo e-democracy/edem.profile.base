@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser">
+
+  <browser:menuItems
+    menu="user_profile_menu" 
+    for="Products.CustomUserFolder.interfaces.ICustomUser" 
+    layer="gs.skin.ogn.edem.interfaces.IEDemSkin">
+    <browser:menuItem 
+      action="edit.html" 
+      title="Change Profile" 
+      description="Change what you show in your profile" 
+      order="1" 
+      permission="zope2.ManageProperties"/>
+    <browser:menuItem 
+      action="image.html" 
+      title="Change Image" 
+      description="Change the image that is shown on your profile and posts" 
+      order="2" 
+      permission="zope2.ManageProperties"/>
+    <browser:menuItem 
+      action="nickname.html" 
+      title="Change Nickname" 
+      description="Change the link to your profile" 
+      order="4" 
+      filter="python:False" 
+      permission="zope2.ManageProperties"/>
+  </browser:menuItems>
+</configure>
